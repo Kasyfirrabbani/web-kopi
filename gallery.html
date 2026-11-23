@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri | Coffee Shop Kasyfi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="kasyfi_header" class="kasyfi_solid">
+  <div class="kasyfi_container kasyfi_nav_wrap">
+    <a href="index.html" class="kasyfi_logo">Coffee<span>Kasyfi</span></a>
+    <button id="kasyfi_hamburger" aria-label="Buka menu"><span class="kasyfi_bar"></span><span class="kasyfi_bar"></span><span class="kasyfi_bar"></span></button>
+    <nav>
+      <ul id="kasyfi_nav_list" class="kasyfi_menu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="products.html">Menu</a></li>
+        <li><a href="gallery.html" class="kasyfi_active">Galeri</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ &amp; Tim</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="kasyfi_banner">
+  <div class="kasyfi_container">
+    <h1>Galeri</h1>
+    <p class="kasyfi_breadcrumb"><a href="index.html">Beranda</a> / Galeri</p>
+  </div>
+</section>
+
+<section class="kasyfi_section">
+  <div class="kasyfi_container">
+    <div class="kasyfi_section_head kasyfi_reveal">
+      <span class="kasyfi_eyebrow">Momen di Kasyfi</span>
+      <h2 class="kasyfi_title">Intip Suasana Kedai Kami</h2>
+      <p class="kasyfi_subtitle">Klik foto untuk memperbesar. Gunakan tombol panah atau keyboard untuk berpindah foto.</p>
+    </div>
+
+    <div class="kasyfi_filter_bar" data-kasyfi-filter-group=".kasyfi_gallery_item">
+      <button class="kasyfi_filter_btn kasyfi_active" data-kasyfi-cat="semua">Semua</button>
+      <button class="kasyfi_filter_btn" data-kasyfi-cat="suasana">Suasana</button>
+      <button class="kasyfi_filter_btn" data-kasyfi-cat="minuman">Minuman</button>
+      <button class="kasyfi_filter_btn" data-kasyfi-cat="proses">Proses</button>
+    </div>
+
+    <div class="kasyfi_gallery_grid">
+      <div class="kasyfi_gallery_item" data-kasyfi-cat="suasana" data-kasyfi-title="Area indoor yang hangat" data-kasyfi-full="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1400&q=80">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=700&q=70" alt="Area indoor"><div class="kasyfi_gallery_cap">Area indoor yang hangat</div></div>
+      <div class="kasyfi_gallery_item" data-kasyfi-cat="minuman" data-kasyfi-title="Latte art buatan barista kami" data-kasyfi-full="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1400&q=80">
+        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=70" alt="Latte art"><div class="kasyfi_gallery_cap">Latte art buatan barista kami</div></div>
+      <div class="kasyfi_gallery_item" data-kasyfi-cat="proses" data-kasyfi-title="Biji kopi pilihan dari petani mitra" data-kasyfi-full="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1400&q=80">
+        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=700&q=70" alt="Biji kopi"><div class="kasyfi_gallery_cap">Biji kopi pilihan dari petani mitra</div></div>
+      <div class="kasyfi_gallery_item" data-kasyfi-cat="proses" data-kasyfi-title="Seduhan manual V60" data-kasyfi-full="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=1400&q=80">
+        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=70" alt="Seduh V60"><div class="kasyfi_gallery_cap">Seduhan manual V60</div></div>
+      <div class="kasyfi_gallery_item" data-kasyfi-cat="suasana" data-kasyfi-title="Sudut santai untuk berdiskusi" data-kasyfi-full="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1400&q=80">
+        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=700&q=70" alt="Sudut santai"><div class="kasyfi_gallery_cap">Sudut santai untuk berdiskusi</div></div>
+      <div class="kasyfi_gallery_item" data-kasyfi-cat="minuman" data-kasyfi-title="Kopi susu gula aren andalan" data-kasyfi-full="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1400&q=80">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=70" alt="Kopi susu"><div class="kasyfi_gallery_cap">Kopi susu gula aren andalan</div></div>
+      <div class="kasyfi_gallery_item" data-kasyfi-cat="suasana" data-kasyfi-title="Meja kerja dengan banyak colokan" data-kasyfi-full="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1400&q=80">
+        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=700&q=70" alt="Meja kerja"><div class="kasyfi_gallery_cap">Meja kerja dengan banyak colokan</div></div>
+      <div class="kasyfi_gallery_item" data-kasyfi-cat="minuman" data-kasyfi-title="Secangkir kopi hangat di pagi hari" data-kasyfi-full="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=80">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=70" alt="Kopi pagi hari"><div class="kasyfi_gallery_cap">Secangkir kopi hangat di pagi hari</div></div>
+      <div class="kasyfi_gallery_item" data-kasyfi-cat="suasana" data-kasyfi-title="Kedai kami saat sore hari" data-kasyfi-full="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1400&q=80">
+        <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=700&q=70" alt="Kedai sore hari"><div class="kasyfi_gallery_cap">Kedai kami saat sore hari</div></div>
+    </div>
+  </div>
+</section>
+
+<div id="kasyfi_lightbox" role="dialog" aria-modal="true">
+  <button id="kasyfi_lb_close" class="kasyfi_lb_btn" aria-label="Tutup">&times;</button>
+  <button id="kasyfi_lb_prev" class="kasyfi_lb_btn" aria-label="Sebelumnya">&#8249;</button>
+  <img id="kasyfi_lightbox_img" src="" alt="">
+  <button id="kasyfi_lb_next" class="kasyfi_lb_btn" aria-label="Berikutnya">&#8250;</button>
+  <p id="kasyfi_lightbox_caption"></p>
+</div>
+
+<footer id="kasyfi_footer">
+  <div class="kasyfi_container kasyfi_footer_grid">
+    <div><a href="index.html" class="kasyfi_logo">Coffee<span>Kasyfi</span></a><p style="margin-top:14px">Kopi lokal berkualitas dengan suasana hangat di jantung Kota Tasikmalaya.</p></div>
+    <div><h4>Navigasi</h4><ul><li><a href="index.html">Beranda</a></li><li><a href="about.html">Tentang</a></li><li><a href="products.html">Menu</a></li><li><a href="gallery.html">Galeri</a></li></ul></div>
+    <div><h4>Lainnya</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="faq.html">FAQ &amp; Tim</a></li><li><a href="contact.html">Kontak</a></li></ul></div>
+    <div><h4>Berlangganan</h4><p style="font-size:.9rem;margin-bottom:12px">Dapatkan info promo &amp; menu baru.</p>
+      <form id="kasyfi_newsletter" style="display:flex;gap:8px;flex-wrap:wrap"><input id="kasyfi_news_email" type="email" placeholder="Email Anda" style="flex:1;min-width:140px;padding:10px 14px;border-radius:30px;border:none;font-family:inherit"><button type="submit" class="kasyfi_btn kasyfi_btn_small">Kirim</button></form></div>
+  </div>
+  <div class="kasyfi_footer_bottom">&copy; <span id="kasyfi_year">2026</span> Coffee Shop Kasyfi. Dibuat oleh Muhammad Kasyfirrabbani 2403010082</div>
+</footer>
+
+<button id="kasyfi_totop" aria-label="Kembali ke atas">&uarr;</button>
+<div id="kasyfi_toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>

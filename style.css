@@ -1,0 +1,298 @@
+/* =========================================================
+   Coffee Shop Kasyfi - style.css
+   Pembuat : Muhammad Kasyfirrabbani (NIM 2403010082)
+   Semua class & id memakai awalan "kasyfi_"
+   ========================================================= */
+
+:root {
+  --kasyfi-espresso: #2b1810;
+  --kasyfi-brown: #5a3825;
+  --kasyfi-caramel: #c8873a;
+  --kasyfi-latte: #e9d8c3;
+  --kasyfi-cream: #faf5ec;
+  --kasyfi-white: #ffffff;
+  --kasyfi-green: #3f5b45;
+  --kasyfi-text: #3a2a22;
+  --kasyfi-muted: #7d6a5f;
+  --kasyfi-radius: 16px;
+  --kasyfi-shadow: 0 10px 30px rgba(43, 24, 16, 0.12);
+  --kasyfi-font-head: 'Playfair Display', Georgia, serif;
+  --kasyfi-font-body: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--kasyfi-font-body);
+  color: var(--kasyfi-text);
+  background: var(--kasyfi-cream);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+/* ---------- Utilitas ---------- */
+.kasyfi_container { width: min(1180px, 92%); margin: 0 auto; }
+.kasyfi_section { padding: 90px 0; }
+.kasyfi_section_alt { background: var(--kasyfi-white); }
+.kasyfi_section_dark { background: var(--kasyfi-espresso); color: var(--kasyfi-latte); }
+.kasyfi_section_head { text-align: center; max-width: 680px; margin: 0 auto 50px; }
+.kasyfi_eyebrow {
+  display: inline-block; font-size: .8rem; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--kasyfi-caramel); font-weight: 600; margin-bottom: 10px;
+}
+.kasyfi_title { font-family: var(--kasyfi-font-head); font-size: clamp(1.9rem, 4vw, 2.8rem); line-height: 1.2; color: var(--kasyfi-espresso); }
+.kasyfi_section_dark .kasyfi_title { color: var(--kasyfi-white); }
+.kasyfi_subtitle { margin-top: 14px; color: var(--kasyfi-muted); }
+.kasyfi_section_dark .kasyfi_subtitle { color: var(--kasyfi-latte); }
+
+.kasyfi_btn {
+  display: inline-block; padding: 13px 30px; border-radius: 50px; border: 2px solid var(--kasyfi-caramel);
+  background: var(--kasyfi-caramel); color: var(--kasyfi-white); font-weight: 600; font-size: .95rem;
+  cursor: pointer; transition: all .3s ease; font-family: inherit;
+}
+.kasyfi_btn:hover { background: transparent; color: var(--kasyfi-caramel); transform: translateY(-3px); }
+.kasyfi_btn_outline { background: transparent; color: var(--kasyfi-white); border-color: var(--kasyfi-white); }
+.kasyfi_btn_outline:hover { background: var(--kasyfi-white); color: var(--kasyfi-espresso); }
+.kasyfi_btn_dark { background: var(--kasyfi-espresso); border-color: var(--kasyfi-espresso); }
+.kasyfi_btn_dark:hover { color: var(--kasyfi-espresso); background: transparent; }
+
+/* ---------- Scroll reveal ---------- */
+.kasyfi_reveal { opacity: 0; transform: translateY(35px); transition: opacity .8s ease, transform .8s ease; }
+.kasyfi_reveal.kasyfi_visible { opacity: 1; transform: none; }
+
+/* ---------- Header / Navigasi ---------- */
+#kasyfi_header {
+  position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+  padding: 18px 0; transition: all .35s ease; background: transparent;
+}
+#kasyfi_header.kasyfi_scrolled, #kasyfi_header.kasyfi_solid {
+  background: rgba(43, 24, 16, .96); padding: 12px 0; box-shadow: 0 4px 20px rgba(0,0,0,.25);
+}
+.kasyfi_nav_wrap { display: flex; align-items: center; justify-content: space-between; }
+.kasyfi_logo { font-family: var(--kasyfi-font-head); font-size: 1.6rem; color: var(--kasyfi-white); font-weight: 700; }
+.kasyfi_logo span { color: var(--kasyfi-caramel); }
+.kasyfi_menu { display: flex; gap: 6px; align-items: center; }
+.kasyfi_menu a {
+  color: var(--kasyfi-latte); padding: 8px 15px; border-radius: 30px; font-size: .92rem; font-weight: 500;
+  transition: all .3s ease; display: block;
+}
+.kasyfi_menu a:hover, .kasyfi_menu a.kasyfi_active { background: var(--kasyfi-caramel); color: var(--kasyfi-white); }
+#kasyfi_hamburger {
+  display: none; background: none; border: none; cursor: pointer; width: 42px; height: 42px; position: relative;
+}
+.kasyfi_bar { position: absolute; left: 8px; width: 26px; height: 3px; background: var(--kasyfi-white); border-radius: 3px; transition: all .3s ease; }
+.kasyfi_bar:nth-child(1) { top: 12px; }
+.kasyfi_bar:nth-child(2) { top: 20px; }
+.kasyfi_bar:nth-child(3) { top: 28px; }
+#kasyfi_hamburger.kasyfi_open .kasyfi_bar:nth-child(1) { top: 20px; transform: rotate(45deg); }
+#kasyfi_hamburger.kasyfi_open .kasyfi_bar:nth-child(2) { opacity: 0; }
+#kasyfi_hamburger.kasyfi_open .kasyfi_bar:nth-child(3) { top: 20px; transform: rotate(-45deg); }
+
+/* ---------- Hero ---------- */
+#kasyfi_hero {
+  min-height: 100vh; display: flex; align-items: center; position: relative; color: var(--kasyfi-white);
+  background:
+    linear-gradient(100deg, rgba(43,24,16,.92) 20%, rgba(43,24,16,.45)),
+    url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=70') center/cover,
+    var(--kasyfi-espresso);
+}
+.kasyfi_hero_content { max-width: 640px; padding-top: 80px; }
+.kasyfi_hero_tag { color: var(--kasyfi-caramel); letter-spacing: 4px; text-transform: uppercase; font-size: .85rem; font-weight: 600; }
+.kasyfi_hero_title { font-family: var(--kasyfi-font-head); font-size: clamp(2.5rem, 7vw, 4.6rem); line-height: 1.1; margin: 14px 0 20px; }
+.kasyfi_hero_title em { color: var(--kasyfi-caramel); font-style: italic; }
+.kasyfi_hero_text { color: var(--kasyfi-latte); font-size: 1.05rem; margin-bottom: 34px; }
+.kasyfi_hero_actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.kasyfi_steam { position: absolute; right: 12%; bottom: 18%; display: flex; gap: 14px; opacity: .5; }
+.kasyfi_steam span { width: 8px; height: 70px; border-radius: 10px; background: linear-gradient(to top, rgba(255,255,255,.7), transparent); animation: kasyfi_steam_anim 3s infinite ease-in-out; }
+.kasyfi_steam span:nth-child(2) { animation-delay: .7s; height: 90px; }
+.kasyfi_steam span:nth-child(3) { animation-delay: 1.4s; }
+@keyframes kasyfi_steam_anim { 0% { transform: translateY(20px) scaleY(.6); opacity: 0; } 50% { opacity: 1; } 100% { transform: translateY(-40px) scaleY(1.2); opacity: 0; } }
+
+/* ---------- Page banner (halaman dalam) ---------- */
+.kasyfi_banner {
+  padding: 170px 0 90px; text-align: center; color: var(--kasyfi-white);
+  background: linear-gradient(rgba(43,24,16,.82), rgba(43,24,16,.9)), url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1600&q=60') center/cover, var(--kasyfi-espresso);
+}
+.kasyfi_banner h1 { font-family: var(--kasyfi-font-head); font-size: clamp(2.2rem, 6vw, 3.6rem); }
+.kasyfi_breadcrumb { margin-top: 10px; color: var(--kasyfi-latte); font-size: .92rem; }
+.kasyfi_breadcrumb a { color: var(--kasyfi-caramel); }
+
+/* ---------- Grid & kartu ---------- */
+.kasyfi_grid_2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 50px; align-items: center; }
+.kasyfi_grid_3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.kasyfi_grid_4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+.kasyfi_card {
+  background: var(--kasyfi-white); border-radius: var(--kasyfi-radius); overflow: hidden;
+  box-shadow: var(--kasyfi-shadow); transition: transform .35s ease, box-shadow .35s ease;
+}
+.kasyfi_card:hover { transform: translateY(-8px); box-shadow: 0 18px 40px rgba(43,24,16,.2); }
+.kasyfi_card_img { height: 220px; overflow: hidden; background: linear-gradient(135deg, var(--kasyfi-brown), var(--kasyfi-caramel)); }
+.kasyfi_card_img img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.kasyfi_card:hover .kasyfi_card_img img { transform: scale(1.1); }
+.kasyfi_card_body { padding: 22px; }
+.kasyfi_card_body h3 { font-family: var(--kasyfi-font-head); font-size: 1.3rem; color: var(--kasyfi-espresso); margin-bottom: 6px; }
+.kasyfi_card_body p { color: var(--kasyfi-muted); font-size: .92rem; }
+.kasyfi_price_row { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; }
+.kasyfi_price { font-weight: 700; color: var(--kasyfi-caramel); font-size: 1.15rem; }
+.kasyfi_badge { display: inline-block; background: var(--kasyfi-latte); color: var(--kasyfi-brown); font-size: .72rem; padding: 3px 12px; border-radius: 20px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+.kasyfi_btn_small { padding: 8px 18px; font-size: .82rem; }
+
+.kasyfi_feature { text-align: center; padding: 34px 24px; background: var(--kasyfi-cream); border-radius: var(--kasyfi-radius); transition: all .3s ease; }
+.kasyfi_feature:hover { background: var(--kasyfi-espresso); color: var(--kasyfi-latte); transform: translateY(-6px); }
+.kasyfi_feature:hover h3 { color: var(--kasyfi-white); }
+.kasyfi_feature_icon { font-size: 2.6rem; margin-bottom: 12px; }
+.kasyfi_feature h3 { font-family: var(--kasyfi-font-head); color: var(--kasyfi-espresso); margin-bottom: 8px; }
+.kasyfi_feature p { font-size: .92rem; }
+
+.kasyfi_about_img { position: relative; }
+.kasyfi_about_img img { border-radius: var(--kasyfi-radius); box-shadow: var(--kasyfi-shadow); width: 100%; height: 440px; object-fit: cover; background: var(--kasyfi-brown); }
+.kasyfi_about_badge { position: absolute; bottom: -22px; right: 24px; background: var(--kasyfi-caramel); color: var(--kasyfi-white); padding: 18px 26px; border-radius: var(--kasyfi-radius); text-align: center; box-shadow: var(--kasyfi-shadow); }
+.kasyfi_about_badge strong { display: block; font-size: 2rem; font-family: var(--kasyfi-font-head); line-height: 1; }
+.kasyfi_about_text p { margin: 14px 0; color: var(--kasyfi-muted); }
+.kasyfi_checklist li { padding-left: 30px; position: relative; margin: 8px 0; }
+.kasyfi_checklist li::before { content: '\2615'; position: absolute; left: 0; color: var(--kasyfi-caramel); }
+
+/* ---------- Statistik ---------- */
+.kasyfi_stat { text-align: center; padding: 20px; }
+.kasyfi_stat_num { font-family: var(--kasyfi-font-head); font-size: 3rem; color: var(--kasyfi-caramel); font-weight: 700; }
+.kasyfi_stat p { color: var(--kasyfi-latte); letter-spacing: 1px; }
+
+/* ---------- Slider testimoni ---------- */
+.kasyfi_slider { max-width: 760px; margin: 0 auto; position: relative; overflow: hidden; }
+.kasyfi_slider_track { display: flex; transition: transform .6s ease; }
+.kasyfi_slide { min-width: 100%; text-align: center; padding: 10px 30px; }
+.kasyfi_slide p { font-size: 1.2rem; font-style: italic; font-family: var(--kasyfi-font-head); color: var(--kasyfi-espresso); }
+.kasyfi_slide h4 { margin-top: 20px; color: var(--kasyfi-caramel); }
+.kasyfi_slide small { color: var(--kasyfi-muted); }
+.kasyfi_slider_dots { display: flex; justify-content: center; gap: 10px; margin-top: 26px; }
+.kasyfi_dot { width: 12px; height: 12px; border-radius: 50%; border: none; background: var(--kasyfi-latte); cursor: pointer; transition: all .3s ease; }
+.kasyfi_dot.kasyfi_active { background: var(--kasyfi-caramel); width: 32px; border-radius: 10px; }
+
+/* ---------- CTA ---------- */
+.kasyfi_cta { text-align: center; background: linear-gradient(135deg, var(--kasyfi-brown), var(--kasyfi-espresso)); color: var(--kasyfi-white); border-radius: 24px; padding: 60px 30px; }
+.kasyfi_cta h2 { font-family: var(--kasyfi-font-head); font-size: clamp(1.7rem, 4vw, 2.4rem); margin-bottom: 12px; }
+.kasyfi_cta p { color: var(--kasyfi-latte); margin-bottom: 26px; }
+
+/* ---------- Filter ---------- */
+.kasyfi_filter_bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 40px; }
+.kasyfi_filter_btn { padding: 9px 24px; border-radius: 30px; border: 2px solid var(--kasyfi-latte); background: transparent; color: var(--kasyfi-brown); font-family: inherit; font-weight: 500; cursor: pointer; transition: all .3s ease; }
+.kasyfi_filter_btn:hover, .kasyfi_filter_btn.kasyfi_active { background: var(--kasyfi-caramel); border-color: var(--kasyfi-caramel); color: var(--kasyfi-white); }
+.kasyfi_hide { display: none !important; }
+
+/* ---------- Galeri & lightbox ---------- */
+.kasyfi_gallery_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.kasyfi_gallery_item { position: relative; border-radius: var(--kasyfi-radius); overflow: hidden; cursor: pointer; height: 280px; background: linear-gradient(135deg, var(--kasyfi-brown), var(--kasyfi-caramel)); box-shadow: var(--kasyfi-shadow); }
+.kasyfi_gallery_item img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.kasyfi_gallery_item:hover img { transform: scale(1.12); }
+.kasyfi_gallery_cap { position: absolute; inset: auto 0 0 0; padding: 40px 18px 16px; color: var(--kasyfi-white); background: linear-gradient(transparent, rgba(43,24,16,.9)); transform: translateY(100%); transition: transform .4s ease; font-weight: 500; }
+.kasyfi_gallery_item:hover .kasyfi_gallery_cap { transform: translateY(0); }
+#kasyfi_lightbox { position: fixed; inset: 0; background: rgba(15,8,5,.94); z-index: 3000; display: none; align-items: center; justify-content: center; flex-direction: column; padding: 20px; }
+#kasyfi_lightbox.kasyfi_open { display: flex; animation: kasyfi_fade .3s ease; }
+#kasyfi_lightbox_img { max-width: 92%; max-height: 76vh; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,.6); }
+#kasyfi_lightbox_caption { color: var(--kasyfi-latte); margin-top: 16px; text-align: center; }
+.kasyfi_lb_btn { position: absolute; background: rgba(255,255,255,.12); color: var(--kasyfi-white); border: none; width: 48px; height: 48px; border-radius: 50%; font-size: 1.5rem; cursor: pointer; transition: background .3s ease; }
+.kasyfi_lb_btn:hover { background: var(--kasyfi-caramel); }
+#kasyfi_lb_close { top: 22px; right: 22px; }
+#kasyfi_lb_prev { left: 22px; top: 50%; }
+#kasyfi_lb_next { right: 22px; top: 50%; }
+@keyframes kasyfi_fade { from { opacity: 0; } to { opacity: 1; } }
+
+/* ---------- Blog ---------- */
+.kasyfi_blog_meta { font-size: .8rem; color: var(--kasyfi-muted); margin-bottom: 6px; }
+.kasyfi_read_more { color: var(--kasyfi-caramel); font-weight: 600; font-size: .9rem; display: inline-block; margin-top: 12px; }
+.kasyfi_read_more:hover { letter-spacing: 1px; }
+.kasyfi_search_box { max-width: 460px; margin: 0 auto 30px; }
+.kasyfi_search_box input { width: 100%; padding: 14px 22px; border-radius: 40px; border: 2px solid var(--kasyfi-latte); font-family: inherit; font-size: 1rem; outline: none; background: var(--kasyfi-white); }
+.kasyfi_search_box input:focus { border-color: var(--kasyfi-caramel); }
+.kasyfi_empty_msg { text-align: center; color: var(--kasyfi-muted); padding: 30px; display: none; }
+
+/* ---------- FAQ ---------- */
+.kasyfi_faq_list { max-width: 820px; margin: 0 auto; }
+.kasyfi_faq_item { background: var(--kasyfi-white); border-radius: 14px; margin-bottom: 14px; box-shadow: 0 4px 14px rgba(43,24,16,.08); overflow: hidden; }
+.kasyfi_faq_q { width: 100%; text-align: left; background: none; border: none; padding: 20px 24px; font-family: inherit; font-size: 1rem; font-weight: 600; color: var(--kasyfi-espresso); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 14px; }
+.kasyfi_faq_icon { font-size: 1.5rem; color: var(--kasyfi-caramel); transition: transform .3s ease; flex-shrink: 0; }
+.kasyfi_faq_item.kasyfi_open .kasyfi_faq_icon { transform: rotate(45deg); }
+.kasyfi_faq_a { max-height: 0; overflow: hidden; transition: max-height .4s ease; }
+.kasyfi_faq_a p { padding: 0 24px 22px; color: var(--kasyfi-muted); }
+
+/* ---------- Tim ---------- */
+.kasyfi_team_card { text-align: center; }
+.kasyfi_team_avatar { width: 100%; height: 280px; object-fit: cover; background: linear-gradient(135deg, var(--kasyfi-brown), var(--kasyfi-caramel)); }
+.kasyfi_team_role { color: var(--kasyfi-caramel); font-weight: 600; font-size: .88rem; }
+
+/* ---------- Kontak ---------- */
+.kasyfi_contact_wrap { display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; align-items: start; }
+.kasyfi_info_box { background: var(--kasyfi-espresso); color: var(--kasyfi-latte); border-radius: var(--kasyfi-radius); padding: 40px 32px; }
+.kasyfi_info_box h3 { font-family: var(--kasyfi-font-head); color: var(--kasyfi-white); font-size: 1.6rem; margin-bottom: 20px; }
+.kasyfi_info_item { display: flex; gap: 14px; margin-bottom: 20px; }
+.kasyfi_info_item span.kasyfi_info_icon { font-size: 1.4rem; }
+.kasyfi_info_item strong { color: var(--kasyfi-caramel); display: block; }
+#kasyfi_form_kontak { background: var(--kasyfi-white); border-radius: var(--kasyfi-radius); padding: 40px 34px; box-shadow: var(--kasyfi-shadow); }
+.kasyfi_form_row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.kasyfi_form_group { margin-bottom: 20px; }
+.kasyfi_form_group label { display: block; font-weight: 600; font-size: .9rem; margin-bottom: 6px; color: var(--kasyfi-espresso); }
+.kasyfi_form_group input, .kasyfi_form_group select, .kasyfi_form_group textarea {
+  width: 100%; padding: 13px 16px; border: 2px solid var(--kasyfi-latte); border-radius: 10px;
+  font-family: inherit; font-size: .95rem; outline: none; background: var(--kasyfi-cream); transition: border-color .3s ease;
+}
+.kasyfi_form_group textarea { min-height: 140px; resize: vertical; }
+.kasyfi_form_group input:focus, .kasyfi_form_group select:focus, .kasyfi_form_group textarea:focus { border-color: var(--kasyfi-caramel); background: var(--kasyfi-white); }
+.kasyfi_form_group.kasyfi_error input, .kasyfi_form_group.kasyfi_error select, .kasyfi_form_group.kasyfi_error textarea { border-color: #c0392b; }
+.kasyfi_error_msg { color: #c0392b; font-size: .8rem; margin-top: 4px; min-height: 1em; display: block; }
+.kasyfi_char_count { text-align: right; font-size: .78rem; color: var(--kasyfi-muted); }
+#kasyfi_form_status { margin-top: 18px; padding: 14px 18px; border-radius: 10px; display: none; font-weight: 500; }
+#kasyfi_form_status.kasyfi_success { display: block; background: #e3f2e1; color: #2e6b34; }
+#kasyfi_form_status.kasyfi_fail { display: block; background: #fdeaea; color: #a93226; }
+.kasyfi_map { margin-top: 50px; border-radius: var(--kasyfi-radius); overflow: hidden; box-shadow: var(--kasyfi-shadow); }
+.kasyfi_map iframe { width: 100%; height: 360px; border: 0; display: block; }
+
+/* ---------- Footer ---------- */
+#kasyfi_footer { background: var(--kasyfi-espresso); color: var(--kasyfi-latte); padding: 70px 0 0; }
+.kasyfi_footer_grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 40px; padding-bottom: 50px; }
+.kasyfi_footer_grid h4 { font-family: var(--kasyfi-font-head); color: var(--kasyfi-white); margin-bottom: 18px; font-size: 1.15rem; }
+.kasyfi_footer_grid li { margin-bottom: 9px; font-size: .92rem; }
+.kasyfi_footer_grid a:hover { color: var(--kasyfi-caramel); }
+.kasyfi_footer_bottom { border-top: 1px solid rgba(233,216,195,.15); text-align: center; padding: 22px 0; font-size: .85rem; }
+
+/* ---------- Toast & back-to-top ---------- */
+#kasyfi_toast { position: fixed; bottom: 30px; left: 50%; transform: translate(-50%, 120px); background: var(--kasyfi-espresso); color: var(--kasyfi-white); padding: 14px 28px; border-radius: 40px; z-index: 4000; box-shadow: var(--kasyfi-shadow); transition: transform .4s ease; border-left: 5px solid var(--kasyfi-caramel); }
+#kasyfi_toast.kasyfi_show { transform: translate(-50%, 0); }
+#kasyfi_totop { position: fixed; right: 24px; bottom: 24px; width: 48px; height: 48px; border-radius: 50%; border: none; background: var(--kasyfi-caramel); color: var(--kasyfi-white); font-size: 1.3rem; cursor: pointer; box-shadow: var(--kasyfi-shadow); opacity: 0; pointer-events: none; transition: all .3s ease; z-index: 900; }
+#kasyfi_totop.kasyfi_show { opacity: 1; pointer-events: auto; }
+#kasyfi_totop:hover { transform: translateY(-4px); background: var(--kasyfi-brown); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 992px) {
+  .kasyfi_grid_3, .kasyfi_gallery_grid { grid-template-columns: repeat(2, 1fr); }
+  .kasyfi_grid_4 { grid-template-columns: repeat(2, 1fr); }
+  .kasyfi_footer_grid { grid-template-columns: 1fr 1fr; }
+  .kasyfi_contact_wrap { grid-template-columns: 1fr; }
+  .kasyfi_steam { display: none; }
+}
+@media (max-width: 820px) {
+  #kasyfi_hamburger { display: block; }
+  .kasyfi_menu {
+    position: fixed; top: 0; right: -100%; width: min(300px, 80%); height: 100vh; background: var(--kasyfi-espresso);
+    flex-direction: column; justify-content: center; gap: 12px; transition: right .4s ease; box-shadow: -10px 0 30px rgba(0,0,0,.4);
+  }
+  .kasyfi_menu.kasyfi_open { right: 0; }
+  .kasyfi_menu a { font-size: 1.1rem; padding: 12px 26px; }
+  #kasyfi_hamburger { z-index: 1100; }
+  .kasyfi_grid_2 { grid-template-columns: 1fr; gap: 40px; }
+  .kasyfi_section { padding: 70px 0; }
+}
+@media (max-width: 600px) {
+  .kasyfi_grid_3, .kasyfi_grid_4, .kasyfi_gallery_grid, .kasyfi_form_row, .kasyfi_footer_grid { grid-template-columns: 1fr; }
+  .kasyfi_about_img img { height: 320px; }
+  .kasyfi_hero_actions .kasyfi_btn { width: 100%; text-align: center; }
+  #kasyfi_form_kontak { padding: 28px 20px; }
+  .kasyfi_lb_btn { width: 40px; height: 40px; }
+}
+@media (max-width: 820px) {
+  #kasyfi_hamburger { display: block; margin-left: auto; }
+  /* ...baris lain tetap... */
+}

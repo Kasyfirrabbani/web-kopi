@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu &amp; Produk | Coffee Shop Kasyfi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="kasyfi_header" class="kasyfi_solid">
+  <div class="kasyfi_container kasyfi_nav_wrap">
+    <a href="index.html" class="kasyfi_logo">Coffee<span>Kasyfi</span></a>
+    <button id="kasyfi_hamburger" aria-label="Buka menu"><span class="kasyfi_bar"></span><span class="kasyfi_bar"></span><span class="kasyfi_bar"></span></button>
+    <nav>
+      <ul id="kasyfi_nav_list" class="kasyfi_menu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="products.html" class="kasyfi_active">Menu</a></li>
+        <li><a href="gallery.html">Galeri</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ &amp; Tim</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="kasyfi_banner">
+  <div class="kasyfi_container">
+    <h1>Menu &amp; Produk</h1>
+    <p class="kasyfi_breadcrumb"><a href="index.html">Beranda</a> / Menu</p>
+  </div>
+</section>
+
+<section class="kasyfi_section">
+  <div class="kasyfi_container">
+    <div class="kasyfi_section_head kasyfi_reveal">
+      <span class="kasyfi_eyebrow">Daftar Menu</span>
+      <h2 class="kasyfi_title">Pilih Favoritmu</h2>
+      <p class="kasyfi_subtitle">Klik kategori untuk menyaring menu, lalu tekan tombol Pesan untuk menambahkan ke pesanan.</p>
+    </div>
+
+    <div class="kasyfi_filter_bar" data-kasyfi-filter-group=".kasyfi_product">
+      <button class="kasyfi_filter_btn kasyfi_active" data-kasyfi-cat="semua">Semua</button>
+      <button class="kasyfi_filter_btn" data-kasyfi-cat="kopi">Kopi</button>
+      <button class="kasyfi_filter_btn" data-kasyfi-cat="nonkopi">Non-Kopi</button>
+      <button class="kasyfi_filter_btn" data-kasyfi-cat="makanan">Makanan</button>
+      <button class="kasyfi_filter_btn" data-kasyfi-cat="biji">Biji Kopi</button>
+    </div>
+
+    <div class="kasyfi_grid_3">
+      <article class="kasyfi_card kasyfi_product" data-kasyfi-cat="kopi">
+        <div class="kasyfi_card_img"><img src="https://i.pinimg.com/1200x/6c/c0/ed/6cc0edbc9fd316df18c7b5efce05781d.jpg" alt="Kopi Susu Gula Aren"></div>
+        <div class="kasyfi_card_body"><span class="kasyfi_badge">Kopi</span><h3>Kopi Susu Gula Aren</h3><p>Espresso, susu segar, dan gula aren asli.</p>
+          <div class="kasyfi_price_row"><span class="kasyfi_price">Rp22.000</span><button class="kasyfi_btn kasyfi_btn_small" data-kasyfi-order="Kopi Susu Gula Aren">Pesan</button></div></div>
+      </article>
+      <article class="kasyfi_card kasyfi_product" data-kasyfi-cat="kopi">
+        <div class="kasyfi_card_img"><img src="https://i.pinimg.com/736x/e4/90/b6/e490b659f2eb038b04cbb23f835ea0ba.jpg" alt="V60 Single Origin"></div>
+        <div class="kasyfi_card_body"><span class="kasyfi_badge">Kopi</span><h3>V60 Single Origin</h3><p>Seduhan manual biji Gayo, floral dan bersih.</p>
+          <div class="kasyfi_price_row"><span class="kasyfi_price">Rp28.000</span><button class="kasyfi_btn kasyfi_btn_small" data-kasyfi-order="V60 Single Origin">Pesan</button></div></div>
+      </article>
+      <article class="kasyfi_card kasyfi_product" data-kasyfi-cat="kopi">
+        <div class="kasyfi_card_img"><img src="https://i.pinimg.com/736x/1a/b1/0c/1ab10ca890b4623553f79d662c549468.jpg" alt="Caramel Latte"></div>
+        <div class="kasyfi_card_body"><span class="kasyfi_badge">Kopi</span><h3>Caramel Latte</h3><p>Latte lembut dengan saus karamel buatan sendiri.</p>
+          <div class="kasyfi_price_row"><span class="kasyfi_price">Rp26.000</span><button class="kasyfi_btn kasyfi_btn_small" data-kasyfi-order="Caramel Latte Kasyfi">Pesan</button></div></div>
+      </article>
+      <article class="kasyfi_card kasyfi_product" data-kasyfi-cat="kopi">
+        <div class="kasyfi_card_img"><img src="https://i.pinimg.com/1200x/4e/3d/c8/4e3dc8baad6fcfe6c8e08f8d32a1ae43.jpg" alt="Americano"></div>
+        <div class="kasyfi_card_body"><span class="kasyfi_badge">Kopi</span><h3>Americano</h3><p>Double shot espresso dengan air panas, tegas dan segar.</p>
+          <div class="kasyfi_price_row"><span class="kasyfi_price">Rp18.000</span><button class="kasyfi_btn kasyfi_btn_small" data-kasyfi-order="Americano">Pesan</button></div></div>
+      </article>
+      <article class="kasyfi_card kasyfi_product" data-kasyfi-cat="nonkopi">
+        <div class="kasyfi_card_img"><img src="https://i.pinimg.com/1200x/f3/35/3d/f3353da22218a4de90629ea801d6d0ff.jpg" alt="Matcha Latte"></div>
+        <div class="kasyfi_card_body"><span class="kasyfi_badge">Non-Kopi</span><h3>Matcha Latte</h3><p>Matcha pilihan dengan susu creamy, tidak pahit.</p>
+          <div class="kasyfi_price_row"><span class="kasyfi_price">Rp24.000</span><button class="kasyfi_btn kasyfi_btn_small" data-kasyfi-order="Matcha Latte">Pesan</button></div></div>
+      </article>
+      <article class="kasyfi_card kasyfi_product" data-kasyfi-cat="nonkopi">
+        <div class="kasyfi_card_img"><img src="https://i.pinimg.com/736x/e2/84/43/e2844377bdea9364211e3e2ad006efd4.jpg" alt="Cokelat Panas"></div>
+        <div class="kasyfi_card_body"><span class="kasyfi_badge">Non-Kopi</span><h3>Cokelat Panas</h3><p>Cokelat Tabanan pekat, hangat, cocok untuk malam hujan.</p>
+          <div class="kasyfi_price_row"><span class="kasyfi_price">Rp20.000</span><button class="kasyfi_btn kasyfi_btn_small" data-kasyfi-order="Cokelat Panas">Pesan</button></div></div>
+      </article>
+      <article class="kasyfi_card kasyfi_product" data-kasyfi-cat="makanan">
+        <div class="kasyfi_card_img"><img src="https://i.pinimg.com/736x/d4/b6/f0/d4b6f07ed1decaff1328375f0a04896b.jpg" alt="Croissant"></div>
+        <div class="kasyfi_card_body"><span class="kasyfi_badge">Makanan</span><h3>Croissant Butter</h3><p>Renyah di luar, lembut di dalam, dipanggang setiap pagi.</p>
+          <div class="kasyfi_price_row"><span class="kasyfi_price">Rp19.000</span><button class="kasyfi_btn kasyfi_btn_small" data-kasyfi-order="Croissant Butter">Pesan</button></div></div>
+      </article>
+      <article class="kasyfi_card kasyfi_product" data-kasyfi-cat="makanan">
+        <div class="kasyfi_card_img"><img src="https://i.pinimg.com/736x/df/8e/90/df8e90dd1c96b8fa569fcc9856e64cef.jpg" alt="Roti Bakar Cokelat Keju"></div>
+        <div class="kasyfi_card_body"><span class="kasyfi_badge">Makanan</span><h3>Roti Bakar Cokelat Keju</h3><p>Roti tebal dengan cokelat leleh dan parutan keju gurih.</p>
+          <div class="kasyfi_price_row"><span class="kasyfi_price">Rp17.000</span><button class="kasyfi_btn kasyfi_btn_small" data-kasyfi-order="Roti Bakar Cokelat Keju">Pesan</button></div></div>
+      </article>
+      <article class="kasyfi_card kasyfi_product" data-kasyfi-cat="biji">
+        <div class="kasyfi_card_img"><img src="https://i.pinimg.com/736x/d3/a1/44/d3a144418ce6a66ab759e4c1b9dbf789.jpg" alt="Biji Kopi Arabika Gayo"></div>
+        <div class="kasyfi_card_body"><span class="kasyfi_badge">Biji Kopi</span><h3>Arabika Gayo 200 gr</h3><p>Medium roast, notes cokelat dan buah beri. Siap giling.</p>
+          <div class="kasyfi_price_row"><span class="kasyfi_price">Rp75.000</span><button class="kasyfi_btn kasyfi_btn_small" data-kasyfi-order="Arabika Gayo 200 gr">Pesan</button></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="kasyfi_section kasyfi_section_alt">
+  <div class="kasyfi_container">
+    <div class="kasyfi_cta kasyfi_reveal">
+      <h2>Pesan Banyak untuk Acara?</h2>
+      <p>Kami melayani paket kopi untuk rapat, seminar, dan hajatan dengan harga spesial.</p>
+      <a href="contact.html" class="kasyfi_btn">Minta Penawaran</a>
+    </div>
+  </div>
+</section>
+
+<footer id="kasyfi_footer">
+  <div class="kasyfi_container kasyfi_footer_grid">
+    <div><a href="index.html" class="kasyfi_logo">Coffee<span>Kasyfi</span></a><p style="margin-top:14px">Kopi lokal berkualitas dengan suasana hangat di jantung Kota Tasikmalaya.</p></div>
+    <div><h4>Navigasi</h4><ul><li><a href="index.html">Beranda</a></li><li><a href="about.html">Tentang</a></li><li><a href="products.html">Menu</a></li><li><a href="gallery.html">Galeri</a></li></ul></div>
+    <div><h4>Lainnya</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="faq.html">FAQ &amp; Tim</a></li><li><a href="contact.html">Kontak</a></li></ul></div>
+    <div><h4>Berlangganan</h4><p style="font-size:.9rem;margin-bottom:12px">Dapatkan info promo &amp; menu baru.</p>
+      <form id="kasyfi_newsletter" style="display:flex;gap:8px;flex-wrap:wrap"><input id="kasyfi_news_email" type="email" placeholder="Email Anda" style="flex:1;min-width:140px;padding:10px 14px;border-radius:30px;border:none;font-family:inherit"><button type="submit" class="kasyfi_btn kasyfi_btn_small">Kirim</button></form></div>
+  </div>
+  <div class="kasyfi_footer_bottom">&copy; <span id="kasyfi_year">2026</span> Coffee Shop Kasyfi. Dibuat oleh Muhammad Kasyfirrabbani 2403010082</div>
+</footer>
+
+<button id="kasyfi_totop" aria-label="Kembali ke atas">&uarr;</button>
+<div id="kasyfi_toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>

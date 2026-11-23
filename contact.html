@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak | Coffee Shop Kasyfi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="kasyfi_header" class="kasyfi_solid">
+  <div class="kasyfi_container kasyfi_nav_wrap">
+    <a href="index.html" class="kasyfi_logo">Coffee<span>Kasyfi</span></a>
+    <button id="kasyfi_hamburger" aria-label="Buka menu"><span class="kasyfi_bar"></span><span class="kasyfi_bar"></span><span class="kasyfi_bar"></span></button>
+    <nav>
+      <ul id="kasyfi_nav_list" class="kasyfi_menu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="products.html">Menu</a></li>
+        <li><a href="gallery.html">Galeri</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ &amp; Tim</a></li>
+        <li><a href="contact.html" class="kasyfi_active">Kontak</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="kasyfi_banner">
+  <div class="kasyfi_container">
+    <h1>Hubungi Kami</h1>
+    <p class="kasyfi_breadcrumb"><a href="index.html">Beranda</a> / Kontak</p>
+  </div>
+</section>
+
+<section class="kasyfi_section">
+  <div class="kasyfi_container">
+    <div class="kasyfi_section_head kasyfi_reveal">
+      <span class="kasyfi_eyebrow">Kirim Pesan</span>
+      <h2 class="kasyfi_title">Ada Pertanyaan atau Ingin Reservasi?</h2>
+      <p class="kasyfi_subtitle">Isi formulir di bawah ini dan pesan Anda akan sampai langsung ke pemilik Coffee Shop Kasyfi.</p>
+    </div>
+
+    <div class="kasyfi_contact_wrap">
+      <aside class="kasyfi_info_box kasyfi_reveal">
+        <h3>Informasi Kedai</h3>
+        <div class="kasyfi_info_item"><span class="kasyfi_info_icon">&#128205;</span><div><strong>Alamat</strong>Jl. Contoh Raya No. 12, Tasikmalaya, Jawa Barat 46115</div></div>
+        <div class="kasyfi_info_item"><span class="kasyfi_info_icon">&#128222;</span><div><strong>Telepon / WhatsApp</strong>0812-3456-7890</div></div>
+        <div class="kasyfi_info_item"><span class="kasyfi_info_icon">&#9993;</span><div><strong>Email</strong>halo@coffeekasyfi.id</div></div>
+        <div class="kasyfi_info_item"><span class="kasyfi_info_icon">&#128339;</span><div><strong>Jam Operasional</strong>Setiap hari, 09.00 - 23.00 WIB<br>(Jumat mulai 13.00 WIB)</div></div>
+      </aside>
+
+      <form id="kasyfi_form_kontak" class="kasyfi_reveal" novalidate>
+        <div class="kasyfi_form_row">
+          <div class="kasyfi_form_group">
+            <label for="kasyfi_input_nama">Nama Lengkap *</label>
+            <input type="text" id="kasyfi_input_nama" placeholder="Contoh: Budi Santoso">
+            <span class="kasyfi_error_msg"></span>
+          </div>
+          <div class="kasyfi_form_group">
+            <label for="kasyfi_input_email">Email *</label>
+            <input type="email" id="kasyfi_input_email" placeholder="nama@email.com">
+            <span class="kasyfi_error_msg"></span>
+          </div>
+        </div>
+        <div class="kasyfi_form_row">
+          <div class="kasyfi_form_group">
+            <label for="kasyfi_input_hp">No. HP / WhatsApp</label>
+            <input type="tel" id="kasyfi_input_hp" placeholder="08123456789">
+            <span class="kasyfi_error_msg"></span>
+          </div>
+          <div class="kasyfi_form_group">
+            <label for="kasyfi_input_topik">Topik Pesan *</label>
+            <select id="kasyfi_input_topik">
+              <option value="">-- Pilih topik --</option>
+              <option value="Reservasi">Reservasi Tempat</option>
+              <option value="Pesanan Besar">Pesanan Dalam Jumlah Besar</option>
+              <option value="Kerja Sama">Kerja Sama</option>
+              <option value="Saran & Kritik">Saran &amp; Kritik</option>
+              <option value="Lainnya">Lainnya</option>
+            </select>
+            <span class="kasyfi_error_msg"></span>
+          </div>
+        </div>
+        <div class="kasyfi_form_group">
+          <label for="kasyfi_input_pesan">Pesan *</label>
+          <textarea id="kasyfi_input_pesan" maxlength="500" placeholder="Tulis pesan Anda di sini..."></textarea>
+          <div class="kasyfi_char_count" id="kasyfi_char_count">0 / 500</div>
+          <span class="kasyfi_error_msg"></span>
+        </div>
+        <div class="kasyfi_form_group">
+          <label><input type="checkbox" id="kasyfi_open_mail" style="width:auto;margin-right:8px">Buka juga aplikasi email saya untuk mengirim salinan</label>
+        </div>
+        <button type="submit" class="kasyfi_btn" id="kasyfi_btn_kirim">Kirim Pesan</button>
+        <div id="kasyfi_form_status" role="alert"></div>
+      </form>
+    </div>
+
+    <div class="kasyfi_map kasyfi_reveal">
+      <iframe title="Lokasi Kota Tasikmalaya" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=108.19%2C-7.37%2C108.25%2C-7.31&amp;layer=mapnik"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer id="kasyfi_footer">
+  <div class="kasyfi_container kasyfi_footer_grid">
+    <div><a href="index.html" class="kasyfi_logo">Coffee<span>Kasyfi</span></a><p style="margin-top:14px">Kopi lokal berkualitas dengan suasana hangat di jantung Kota Tasikmalaya.</p></div>
+    <div><h4>Navigasi</h4><ul><li><a href="index.html">Beranda</a></li><li><a href="about.html">Tentang</a></li><li><a href="products.html">Menu</a></li><li><a href="gallery.html">Galeri</a></li></ul></div>
+    <div><h4>Lainnya</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="faq.html">FAQ &amp; Tim</a></li><li><a href="contact.html">Kontak</a></li></ul></div>
+    <div><h4>Berlangganan</h4><p style="font-size:.9rem;margin-bottom:12px">Dapatkan info promo &amp; menu baru.</p>
+      <form id="kasyfi_newsletter" style="display:flex;gap:8px;flex-wrap:wrap"><input id="kasyfi_news_email" type="email" placeholder="Email Anda" style="flex:1;min-width:140px;padding:10px 14px;border-radius:30px;border:none;font-family:inherit"><button type="submit" class="kasyfi_btn kasyfi_btn_small">Kirim</button></form></div>
+  </div>
+  <div class="kasyfi_footer_bottom">&copy; <span id="kasyfi_year">2026</span> Coffee Shop Kasyfi. Dibuat oleh Muhammad Kasyfirrabbani 2403010082</div>
+</footer>
+
+<button id="kasyfi_totop" aria-label="Kembali ke atas">&uarr;</button>
+<div id="kasyfi_toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
